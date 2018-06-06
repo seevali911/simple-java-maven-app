@@ -33,6 +33,9 @@ pipeline {
         }
         success {
             echo 'Everything worked fine'
+			mail to: 'seevali.nalinda@informationcatalyst.com',
+            subject: "All good : ${currentBuild.fullDisplayName}",
+            body: "All good with ${env.BUILD_URL}"
         }
         failure {
             echo 'Operation failed'
