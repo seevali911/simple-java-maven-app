@@ -29,16 +29,16 @@ pipeline {
     }
 	post {
         always {
-            echo 'This will always run'
+            echo 'Follwoing is the result of the process'
         }
         success {
-            echo 'This will run only if successful'
+            echo 'Everything worked fine'
         }
         failure {
-            echo 'This will run only if failed'
+            echo 'Operation failed'
         }
         unstable {
-            echo 'This will run only if the run was marked as unstable'
+            echo 'This buld is unstable'
         }
         changed {
             echo 'This will run only if the state of the Pipeline has changed'
